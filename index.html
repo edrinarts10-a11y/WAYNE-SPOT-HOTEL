@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"/>
+  <title>Wayne Spot Hotel</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css" integrity="sha512-ajhUYg8JAATDFejqbeN7KbF2zyPbbqz04dgOLyGcYEk/MJD3V+HJhJLKvJ2VVlqrr4PwHeGTTWxbI+8teA7snw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+<!-- awesome 😎 icons -->
+<div style="display:flex;justify-content: space-between;font-size:12px">
+  
+  <a href="tel:+256 706 971379" class="icon-link">
+<i class="fas fa-phone-volume" style="font-size:20px;padding-left:9px"></i></a>
+
+<a href="mailto:waynespot@gmail.com" class="icon-link">
+<i class="far fa-envelope" style="font-size:20px;padding-right:10px"></a></i>
+  
+
+  </div>
+</div>
+  <header>
+<image src="logo.jpg" style="length: 25px; width: 50px; border-radius:50%"></image>
+    <h3 style="color">Wyan Spot Hotel</h3>
+  <div class="menu-toggle" id="menu-toggle">&#9776;</div> <!-- Hamburger Icon -->
+    <nav id="nav">
+      <ul>
+        <li ><a href="index.html"><i class="fas fa-home" style="font-size:30px;padding-right:10px"></i></a></li>
+        <li><a href="Showroom.html">Showroom</a></li>
+        <li><a href="bookings.html">Vist Us</a></li>
+      </ul>
+    </nav>
+  </header>
+<!-- hero section -->
+  <section class="hero">
+    <h2>Wayne Spot Hotel Kakiri-Kambe,</h2>
+    <h3>Kampala-Hoima Road after Stabex</h3>
+    <p><marquee>A Place to Be</marquee></p>
+     <!-- Hero Section with Auto Sliding Images -->
+  <section class="hero">
+    <div class="slides">
+      <img src="wyan.jpg" class="slide" />
+      <img src="counterlights.jpg" class="slide" />
+      <img src="hotel5.jpg" class="slide" />
+    </div>
+    <div class="hero-text">
+      <h1>Experience Comfort & Elegance</h1>
+      <p>Your luxury stay begins here</p>
+      <a href="#" class="btn">Book Now</a>
+    </div>
+  </section>
+
+  </section>
+<script>
+  let slides = document.querySelectorAll('.slide');
+let current = 0;
+
+function showSlide(index) {
+slides.forEach((slide, i) => {
+    slide.classList.remove('active');
+    if (i === index) slide.classList.add('active');
+  });
+}
+
+function nextSlide() {
+  current = (current + 1) % slides.length;
+  showSlide(current);
+}
+
+showSlide(current);
+setInterval(nextSlide, 4000); // Change every 4 sec
+const toggle = document.getElementById('menu-toggle');
+const nav = document.querySelector('nav ul');
+
+
+
+
+toggle.addEventListener('click', () => {
+  nav.classList.toggle('show');
+});
+</script>
+
+    <p>Whether you are on a road trip or you are heading somewhere along Kampala-Hoima road Wayne Spot Hotel is your go-to destination for comfort, class, and convenience.<p/><p> Whether you’re traveling for business or leisure, we’ve got you covered.</p>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="feature">
+      <h3>🛏 Elegant Rooms</h3>
+      <p>Relax in luxury rooms with full amenities.</p>
+    </div>
+    <div class="feature">
+      <h3>🍽 Restaurant</h3>
+      <p>Enjoy delicious local and international cuisine.</p>
+    </div>
+    <div class="feature">
+      <h3>Bar</h3>
+      <p>With the Dopest DJs around town accompanied with the latest bear and wine</p>
+    </div>
+    <div class="feature">
+      <h3>Sauna and Steam bath</h3>
+      <p>Always steamed, Monday to Sunday 24/7</p>
+    </div>
+  </section>
+<!--  Services -->
+<div class="hexagon" >
+  <h2><center>More services</center></h2>
+<ol>
+  <li>Bucket Night (5 beers @ UGX:20,000)every Tuesday's</li><br>
+  <li>Aerobics Classes on Wednesday's</li><br>
+  <li>Thursday's with  Throw Back music with wyan pizza </li><br>
+  <li>Open Mic every single Friday</li><br>
+  <li>Saturday's we go for Bucket Night, Aerobics Classes & Dopest DJ mixes </li><br>
+  <li>Then we close the week with Live Band on Sunday's</li><br>
+  <p>*Dont forget that always we have <span style="color:red">Happy Hour</span> every day from <span style="color:red">6 to 8pm</span></p><br>
+</ol>
+</div>
+  
+  
+  <!-- Call to Action -->
+  <section class="cta">
+    <h2>Ready to Book Your Stay?</h2>
+    <a href="#" class="btn">Book a Room</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Wayne Spot Hotel. All Rights Reserved.</p>
+    <p>Phone: +256 706 971379 | mail: waynespot@gmail.com</p>
+  </footer>
+<a href="https://vm.tiktok.com/ZMDY4esjs/"
+   class="play-btn" target="_blank" rel="noopener">
+  <i class="fas fa-play"></i>
+</a>
+  <script src="script.js"></script>
+</body>
+</html>
