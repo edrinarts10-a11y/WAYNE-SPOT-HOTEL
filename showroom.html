@@ -1,0 +1,168 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"/>
+  <title>Wyan Spot Hotel</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css" integrity="sha512-ajhUYg8JAATDFejqbeN7KbF2zyPbbqz04dgOLyGcYEk/MJD3V+HJhJLKvJ2VVlqrr4PwHeGTTWxbI+8teA7snw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Tangerine"> 
+
+</head>
+<body>
+<!-- awesome 😎 icons -->
+<div style="display:flex;justify-content: space-between;font-size:12px; background-color: white;">
+  
+  <a href="tel:+256 706 971379" class="icon-link">
+<i class="fas fa-phone-volume" style="font-size:20px;padding-left:9px"></i></a>
+
+<a href="mailto:wyanspot@gmail.com" class="icon-link">
+<i class="far fa-envelope" style="font-size:20px;padding-right:10px"></a></i>
+  
+  
+  </div>
+</div>
+  <header>
+<image src="logo.jpg" style="length: 25px; width: 50px; border-radius:50%">
+</image>
+   <div class="div-h3">
+      <h3 style="color">Wyan Spot Hotel</h3>
+   </div> 
+  <div class="menu-toggle" id="menu-toggle">&#9776;</div> <!-- Hamburger Icon -->
+    <nav id="nav">
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home" style="font-size:30px;padding-right:10px"></i></a></li>
+        <li><a href="Showroom.html">Showroom</a></li>
+        <li><a href="bookings.html">Vist Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+<!-- showroom --->
+
+<section id="showroom" class="showroom">
+  <h2 class="showroom-h2">Our Showroom</h2>
+<h3 class="room-h3">Bed Rooms</h3>
+  <div class="room-grid">
+    <div class="room-card">
+      <img src="hotel1.jpg" alt="Deluxe Room">
+      <h3>Deluxe Room</h3>
+      <p>Spacious and elegant with city view.</p>
+      <span>UGX 30,000 / night</span>
+    </div>
+
+    <div class="room-card">
+      <img src="hotel2.jpg" alt="Single Room">
+      <h3>Single Room</h3>
+      <p>Perfect for solo travelers.</p>
+      <span>UGX 20,000/ night</span>
+    </div>
+
+    <div class="room-card">
+      <img src="hotel3.jpg" alt="Family Suite">
+      <h3>Family Suite</h3>
+      <p>Comfortable space for the whole family.</p>
+      <span>UGX 200,000 / night</span>
+    </div>
+  </div>
+<h3 class="room-h3">Sitting Rooms</h3>
+<div class="room-grid">
+  <div class="room-card">
+   <img src="outdoor.jpg"  alt="Out door Roof">
+   <p>You can have breakfast out doors at the roof, whether coffe r tea we got you covered</p>
+  </div>
+  <div class="room-card">
+   <img src="viptable.jpg"  alt="Out door Roof">
+   <p>You can have breakfast out doors at the roof, whether coffe r tea we got you covered</p>
+  </div>
+  <div class="room-card">
+   <img src="event.jpg"  alt="Out door Roof">
+   <p>You can have breakfast out doors at the roof, whether coffe r tea we got you covered</p>
+  </div>
+</div>
+<h3 class="room-h3">Drinks & Food</h3>
+    <div class="room-grid">
+      <div class="room-card">
+        <img src="pizza.jpg" alt="wyan pizza">
+        <p>every  thursdays</p>
+      </div>
+    <div class="room-grid">
+      
+    <div class="room-grid">
+      <div class="room-card">
+        <img src="IMG_20260221_124209_465.jpg" alt="wyan pizza">
+        <p>every  thursdays</p>
+      </div>
+    </div>
+ <div class="room-card">
+        <img src="IMG_20260221_120702_908.jpg" alt="wyan pizza">
+        <p>every  thursdays</p>
+      </div>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  let slides = document.querySelectorAll('.slide');
+let current = 0;
+
+function showSlide(index) {
+slides.forEach((slide, i) => {
+    slide.classList.remove('active');
+    if (i === index) slide.classList.add('active');
+  });
+}
+
+  function nextSlide() {
+  current = (current + 1) % slides.length;
+  showSlide(current);
+}
+
+showSlide(current);
+setInterval(nextSlide, 4000); // Change every 4 sec
+const toggle = document.getElementById('menu-toggle');
+const nav = document.querySelector('nav ul');
+
+
+
+
+toggle.addEventListener('click', () => {
+  nav.classList.toggle('show');
+});
+</script>
+
+
+
+
+
+  <footer>
+    <p>© 2025 Wyan Spot Hotel. All Rights Reserved.</p>
+    <p>Phone: +256 706 971379 | mail: waynespot@gmail.com</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
